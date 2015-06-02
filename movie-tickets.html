@@ -24,13 +24,46 @@
               <option value="old">Old</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="new-show-time">Enter a Show Time</label>
-            <input type="number" min="0" max="2359" class="form-control new-show-time">
+          <div id="new-showtimes">
+            <div class="form-group new-show-time-container">
+              <label for="new-show-time">Enter a Show Time</label>
+              <input type="number" min="0" max="2359" class="form-control new-show-time">
+            </div>
           </div>
           <button type="submit" id="submit-movie">Add Movie Info</button>
           <button type="submit" id="add-showtime">Add Another Showing</button>
         </form>
+      </div>
+      <div>
+        <ul class="movies">
+
+        </ul>
+      </div>
+
+      <div>
+        <p>
+          Title: <span class="movie-info"></span>
+        </p>
+        <ul class="movie-info-times">
+
+        </ul>
+      </div>
+
+      <div>
+        <form id="buy-ticket">
+          <select id="ticket-times">
+
+          </select>
+          <select id="age">
+            <option value="child">Child</option>
+            <option value="adult">Adult</option>
+            <option value="senior">Senior</option>
+          </select>
+          <button type="submit" id="check-price">Check Price</button>
+        </form>
+        <p id="price">
+
+        </p>
       </div>
     </div>
   </body>
