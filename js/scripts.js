@@ -60,15 +60,17 @@ $(document).ready(function() {
     });
 
     $("ul.movies").append("<li class='movie-item'>" + myMovie.movieTitle + "</li>");
-
     $(".movie-item").last().click(function() {
       $(".movie-info").text(myMovie.movieTitle);
+      $("ul.movie-info-times").html(""); //since ul does not have a visible value attribute we need to clear out html and not value (val)
       myMovie.showTimes.forEach(function(showTime) {
         $("ul.movie-info-times").append("<li>" + showTime.toString() + "</li>")
       });
       var index = allMovies.indexOf(myMovie)
       $("form#buy-ticket").data("id", index);
       $("form#buy-ticket").data("release", myMovie.release);
+
+      $("select#ticket-times").html("");
 
       myMovie.showTimes.forEach(function(showTime) {
         $("select#ticket-times").append("<option value='" + showTime.toString() + "'>" + showTime.toString() + "</option>");
