@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Movie Tickets</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Movie Tickets</h1>
+      <div class="new-movie">
+        <form id="add-movie">
+          <div class="form-group">
+            <label for="new-movie-title">Enter Movie Title</label>
+            <input type="text" class="form-control" id="new-movie-title">
+          </div>
+          <div class="form-group">
+            <label for="release-type">Release Type</label>
+            <select name="release-type" id="release-type" class="form-control">
+              <option value="">Please select one</option>
+              <option value="new">New</option>
+              <option value="old">Old</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="new-show-time">Enter a Show Time</label>
+            <input type="number" min="0" max="2359" class="form-control new-show-time">
+          </div>
+          <button type="submit" id="submit-movie">Add Movie Info</button>
+          <button type="submit" id="add-showtime">Add Another Showing</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
